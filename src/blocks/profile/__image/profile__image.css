@@ -10,6 +10,31 @@
   background-image: url("../../../images/avatar.jpg");
 }
 
+/* Смена аватара пользователя */
+.profile__image-container {
+  position: relative;
+
+}
+
+.profile__avatar-edit-button {
+  position: absolute;
+  top: 0;
+  width: 81%;
+  height: 100%;
+  background: url("../../../images/edit-icon.svg") no-repeat center;
+  background-size: 26px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.profile__image-container:hover .profile__avatar-edit-button {
+  opacity: 1;
+}
+
 @media screen and (max-width: 740px) {
   .profile__image {
     margin: 0 10px 0 0;

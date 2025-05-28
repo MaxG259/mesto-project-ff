@@ -5,3 +5,34 @@
   pointer-events: all;
   transition: visibility 0s, opacity 0.6s;
 }
+
+/* Реализация нового попапа подтверждения удаления */
+.popup_type_delete-card .popup__content {
+  max-width: 430px;
+  padding: 34px 36px;
+  box-sizing: border-box;
+  min-height: auto; /* Для компактности */
+}
+
+.popup_type_delete-card .popup__title {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0 0 38px;
+}
+
+.popup_type_delete-card .popup__button {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.popup_type_delete-card .popup__button:hover {
+  opacity: 0.8;
+}

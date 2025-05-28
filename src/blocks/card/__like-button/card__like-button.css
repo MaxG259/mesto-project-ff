@@ -18,3 +18,19 @@
 .card__like-button:hover {
   opacity: 0.6;
 }
+
+/* Стили для отображения количества лайков */
+.card__like-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px; /* Отступ между кнопкой и счётчиком */
+}
+
+.card__like-count {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.2;
+}

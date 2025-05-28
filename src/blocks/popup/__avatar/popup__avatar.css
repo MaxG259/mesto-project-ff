@@ -1,0 +1,52 @@
+/* Стили попапа для обновляение аватарки пользователя */
+.popup_type_avatar .popup__content {
+  max-width: 430px;
+  padding: 34px 36px;
+  box-sizing: border-box;
+  min-height: auto;
+}
+
+.popup_type_avatar .popup__title {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0 0 38px;
+}
+
+.popup_type_avatar .popup__input {
+  width: 100%;
+  padding: 0 0 13px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.popup_type_avatar .popup__button {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.popup_type_avatar .popup__button:hover {
+  opacity: 0.8;
+}
+
+.popup__error {
+  display: none;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 12px;
+  color: #ff0000;
+  margin-top: 5px;
+}
+
+.popup__error_visible {
+  display: block;
+}
