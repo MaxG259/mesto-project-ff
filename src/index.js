@@ -109,6 +109,8 @@ Promise.all([getUserInfo(), getInitialCards()])
 // Обработчик отправки формы удаления карточки
 function handleDeleteFormSubmit(evt) {
   evt.preventDefault();
+  const submitButton = deleteForm.querySelector('.popup__button');
+  submitButton.textContent = BUTTON_TEXT.LOADING;
   deleteCardApi(currentCardId)
     .then(() => {
       currentCardElement.remove();
@@ -116,6 +118,9 @@ function handleDeleteFormSubmit(evt) {
     })
     .catch((err) => {
       console.error('Ошибка удаления карточки:', err);
+    })
+    .finally(() => {
+      submitButton.textContent = BUTTON_TEXT.SAVE;
     });
 }
 
@@ -136,10 +141,11 @@ function handleFormSubmit(evt) {
       profileTitle.textContent = userData.name;
       profileDescription.textContent = userData.about;
       closeModal(editPopup);
-      submitButton.textContent = BUTTON_TEXT.SAVE;
     })
     .catch((err) => {
       console.error('Ошибка обновления профиля:', err);
+    })
+    .finally(() => {
       submitButton.textContent = BUTTON_TEXT.SAVE;
     });
 }
@@ -159,10 +165,11 @@ function handleCardFormSubmit(evt) {
       newCardForm.reset();
       clearValidation(newCardForm, validationConfig);
       closeModal(newCardPopup);
-      submitButton.textContent = BUTTON_TEXT.CREATE;
     })
     .catch((err) => {
       console.error('Ошибка добавления карточки:', err);
+    })
+    .finally(() => {
       submitButton.textContent = BUTTON_TEXT.CREATE;
     });
 }
@@ -183,10 +190,11 @@ function handleAvatarFormSubmit(evt) {
       avatarForm.reset();
       clearValidation(avatarForm, validationConfig);
       closeModal(avatarPopup);
-      submitButton.textContent = BUTTON_TEXT.SAVE;
     })
     .catch((err) => {
       console.error('Ошибка обновления аватара:', err);
+    })
+    .finally(() => {
       submitButton.textContent = BUTTON_TEXT.SAVE;
     });
 }
